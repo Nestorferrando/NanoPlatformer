@@ -4,7 +4,7 @@
  *
  * Created on 05-dic-2011, 20:08:51
  */
-package nanoplatformer.output;
+package nanoplatformer.graphics.output.java2D;
 
 import java.awt.event.*;
 
