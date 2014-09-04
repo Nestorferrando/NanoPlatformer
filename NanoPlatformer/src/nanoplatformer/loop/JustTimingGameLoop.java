@@ -13,6 +13,12 @@ package nanoplatformer.loop;
 public class JustTimingGameLoop extends GameLoop {
 
     private long previousTime;
+
+    public JustTimingGameLoop(int framesPerSecond) {
+        super(framesPerSecond);
+    }
+    
+    
     
     @Override
     protected void performLoopOperations(long currentLoopTime_ms) {
@@ -25,11 +31,9 @@ public class JustTimingGameLoop extends GameLoop {
 
     private void performRandomCalculations() {
         try {
-            Thread.sleep( (long)(Math.random()*10) );
+            Thread.sleep( (long)(Math.random()*10));
         } catch (InterruptedException ex){}
     }
 
-    
-    
-    
+     
 }

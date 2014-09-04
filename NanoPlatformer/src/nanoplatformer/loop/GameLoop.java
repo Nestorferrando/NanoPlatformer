@@ -12,17 +12,18 @@ package nanoplatformer.loop;
  */
 public abstract class GameLoop extends Thread {
 
-    private static final int FRAMES_PER_SECOND=30;
-    private static final long MS_BETWEEN_FRAMES=1000/FRAMES_PER_SECOND;
+    
+    private long msPerFrame;
     
     private boolean running=true;
     
-    public GameLoop() {
+    public GameLoop(int framesPerSecond) {
         
         String osName = System.getProperty("os.name");
         if (osName.startsWith("Win")) {
             createTimerAccuracyThread();  
     }
+       msPerFrame=1000/framesPerSecond;
     }
     
     public void finishLoop(){
@@ -38,7 +39,7 @@ public abstract class GameLoop extends Thread {
            
            performLoopOperations(currentLoopTime_ms);
            
-           long nextLoopTime_ms=currentLoopTime_ms+MS_BETWEEN_FRAMES;
+           long nextLoopTime_ms=currentLoopTime_ms+msPerFrame;
            long remaining_ms=nextLoopTime_ms-getCurrentTimeMS();
            try {
                Thread.sleep(remaining_ms);
