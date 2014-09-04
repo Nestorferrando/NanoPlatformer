@@ -6,6 +6,9 @@
 
 package nanoplatformer;
 
+import nanoplatformer.loop.GameLoop;
+import nanoplatformer.loop.JustTimingGameLoop;
+
 /**
  *
  * @author Nestor
@@ -17,6 +20,9 @@ public class NanoPlatformer {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        GameLoop loop= new JustTimingGameLoop();
+        loop.start();
     }
     
 }

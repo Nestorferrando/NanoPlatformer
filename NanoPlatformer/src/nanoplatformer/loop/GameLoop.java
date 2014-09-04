@@ -10,14 +10,14 @@ package nanoplatformer.loop;
  *
  * @author Nestor
  */
-public abstract class AbstractGameLoop extends Thread {
+public abstract class GameLoop extends Thread {
 
     private static final int FRAMES_PER_SECOND=30;
     private static final long MS_BETWEEN_FRAMES=1000/FRAMES_PER_SECOND;
     
     private boolean running=true;
     
-    public AbstractGameLoop() {
+    public GameLoop() {
         
         String osName = System.getProperty("os.name");
         if (osName.startsWith("Win")) {
@@ -36,7 +36,7 @@ public abstract class AbstractGameLoop extends Thread {
        
            long currentLoopTime_ms=getCurrentTimeMS();
            
-           performLoopOperations();
+           performLoopOperations(currentLoopTime_ms);
            
            long nextLoopTime_ms=currentLoopTime_ms+MS_BETWEEN_FRAMES;
            long remaining_ms=nextLoopTime_ms-getCurrentTimeMS();
@@ -52,7 +52,7 @@ public abstract class AbstractGameLoop extends Thread {
     }
 
     //Template Method (design pattern)
-    protected abstract void performLoopOperations();
+    protected abstract void performLoopOperations(long currentLoopTime_ms);
 
     private void createTimerAccuracyThread() {
         // On windows the sleep functions can be highly inaccurate by
