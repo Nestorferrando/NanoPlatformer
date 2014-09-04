@@ -12,7 +12,7 @@ package nanoplatformer.input;
  */
 public interface IPollableInput {
   
-    public boolean isPressed(int pos);
+    public boolean isPressed(int keyPosition);
     
     public boolean poll();
     
