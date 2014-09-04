@@ -21,7 +21,7 @@ public class NanoPlatformer {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        GameLoop loop= new JustTimingGameLoop();
+        GameLoop loop= new JustTimingGameLoop(30);
         loop.start();
     }
     
