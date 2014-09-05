@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package nanoplatformer.graphics.renderer;
+package nanoplatformer.graphics;
 
 import java.util.Objects;
 
@@ -15,14 +15,28 @@ import java.util.Objects;
 public class GraphicItem {
     
     private final String name;
+    private final int width;
+    private final int height;
 
-    public GraphicItem(String name) {
+    public GraphicItem(String name, int width, int height) {
         this.name = name;
+        this.width = width;
+        this.height = height;
     }
+
 
     public String getName() {
         return name;
     }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+    
 
     @Override
     public int hashCode() {

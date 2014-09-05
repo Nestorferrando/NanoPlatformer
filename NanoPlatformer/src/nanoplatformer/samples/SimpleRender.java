@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package nanoplatformer.samples;
 
 import java.awt.Color;
+import nanoplatformer.graphics.graphicspool.IGraphicsPool;
+import nanoplatformer.graphics.graphicspool.java2D.Java2DGraphicsPool;
 import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
-import nanoplatformer.graphics.renderer.GraphicItem;
 import nanoplatformer.graphics.renderer.IRenderer;
-import nanoplatformer.graphics.renderer.java2D.BasicRenderer;
-import nanoplatformer.graphics.renderer.java2D.GraphicsPool;
-
+import nanoplatformer.graphics.renderer.java2D.Java2DRenderer;
 
 /**
  *
@@ -24,20 +22,25 @@ public class SimpleRender {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        
-IRenderer renderer = new BasicRenderer(new GraphicsPool(),new AcceleratedFrame(640,480));
 
+        Java2DGraphicsPool java2DGraphicsPool = new Java2DGraphicsPool();
+        java2DGraphicsPool.loadFromCurrentDirectory();
 
-//we need to clear the background first
-renderer.fillBackground(Color.yellow);
-        
-renderer.drawGraphic(new GraphicItem("squareDev"), 64, 64);
-renderer.showBuffer();
+        IRenderer renderer = new Java2DRenderer(java2DGraphicsPool, new AcceleratedFrame(640, 480));
 
-
-
+        //------------------
+        //render items from graphic names using only interfaces
+        //------------------
+        renderStuff(java2DGraphicsPool, renderer);
     }
-    
+
+    private static void renderStuff(IGraphicsPool graphicsPool, IRenderer renderer) {
+
+        //we need to clear the background first
+        renderer.fillBackground(Color.yellow);
+
+        renderer.drawGraphic(graphicsPool.getFromName("squareDev"), 64, 64);
+        renderer.showBuffer();
+    }
+
 }

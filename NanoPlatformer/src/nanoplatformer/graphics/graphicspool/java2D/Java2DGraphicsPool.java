@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nanoplatformer.graphics.renderer.java2D;
+package nanoplatformer.graphics.graphicspool.java2D;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -11,21 +11,24 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
-import nanoplatformer.graphics.renderer.GraphicItem;
+import nanoplatformer.graphics.GraphicItem;
+import nanoplatformer.graphics.graphicspool.BaseGraphicsPool;
 import nanoplatformer.graphics.renderer.PNGFileFilter;
 
 /**
  *
  * @author Nestor
  */
-public class GraphicsPool {
+public class Java2DGraphicsPool extends BaseGraphicsPool {
 
+    
     private Map<GraphicItem, BufferedImage> graphicsMap;
+    
+    
 
-    public GraphicsPool() {
+    public Java2DGraphicsPool() {
         this.graphicsMap = new HashMap();
 
-        loadPNGGraphicsFromCurrentDirectory();
 
     }
 
@@ -33,17 +36,24 @@ public class GraphicsPool {
         return graphicsMap.get(item);
     }
 
-    private void loadPNGGraphicsFromCurrentDirectory() {
+    @Override
+    protected Map<String, GraphicItem> loadSpecificImages() {
 
+        Map<String, GraphicItem> graphicsItemsMap=new HashMap();
         String[] imageFileNames = new File(".").list(new PNGFileFilter());
+        
 
         for (String filename : imageFileNames) {
             try {
-
-                graphicsMap.put(new GraphicItem(removeExtension(filename)), ImageIO.read(new File(filename)));
+                    BufferedImage image=ImageIO.read(new File(filename));
+                    GraphicItem item=new GraphicItem(removeExtension(filename),image.getWidth(),image.getHeight());
+                    
+                graphicsMap.put(item, image);
+                graphicsItemsMap.put(item.getName(), item);
             } catch (IOException ex) {
             }
         }
+        return graphicsItemsMap;
         
     }
 

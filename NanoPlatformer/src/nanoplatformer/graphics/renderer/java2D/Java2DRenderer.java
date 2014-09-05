@@ -6,9 +6,10 @@
 
 package nanoplatformer.graphics.renderer.java2D;
 
+import nanoplatformer.graphics.graphicspool.java2D.Java2DGraphicsPool;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import nanoplatformer.graphics.renderer.GraphicItem;
+import nanoplatformer.graphics.GraphicItem;
 import nanoplatformer.graphics.renderer.IRenderer;
 import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
 
@@ -16,12 +17,12 @@ import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
  *
  * @author Nestor
  */
-public class BasicRenderer implements IRenderer {
+public class Java2DRenderer implements IRenderer {
     
-    private GraphicsPool graphicsPool;
+    private Java2DGraphicsPool graphicsPool;
     private AcceleratedFrame acceleratedFrame;
 
-    public BasicRenderer(GraphicsPool graphicsPool, AcceleratedFrame acceleratedFrame) {
+    public Java2DRenderer(Java2DGraphicsPool graphicsPool, AcceleratedFrame acceleratedFrame) {
         this.graphicsPool = graphicsPool;
         this.acceleratedFrame = acceleratedFrame;
     }

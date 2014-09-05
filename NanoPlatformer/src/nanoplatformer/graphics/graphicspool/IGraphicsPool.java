@@ -4,23 +4,21 @@
  * and open the template in the editor.
  */
 
-package nanoplatformer.graphics.renderer;
+package nanoplatformer.graphics.graphicspool;
 
 import nanoplatformer.graphics.GraphicItem;
-import java.awt.Color;
 
 /**
  *
  * @author Nestor
  */
-
-public interface IRenderer {
+public interface IGraphicsPool {
     
     
-    public void drawGraphic(GraphicItem resource,int positionX, int positionY);
+public void loadFromCurrentDirectory();
     
-    public void fillBackground(Color color);
+public GraphicItem getFromName(String name);
     
-    public void showBuffer();
+    
     
 }
