@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package nanoplatformer;
+package nanoplatformer.samples;
 
 import nanoplatformer.loop.GameLoop;
 import nanoplatformer.loop.JustTimingGameLoop;
@@ -13,7 +13,7 @@ import nanoplatformer.loop.JustTimingGameLoop;
  *
  * @author Nestor
  */
-public class NanoPlatformer {
+public class SimpleLoop {
 
     /**
      * @param args the command line arguments

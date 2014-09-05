@@ -29,6 +29,7 @@ public class BasicRenderer implements IRenderer {
     public void drawGraphic(GraphicItem resource, int positionX, int positionY) {
         
         Graphics2D g=acceleratedFrame.getCanvas().getGraphics();
+        
         g.drawImage(graphicsPool.getBufferedImage(resource), positionX,positionY,null);
         g.dispose();
     }

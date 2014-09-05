@@ -3,9 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer/src/nanoplatformer/output/AcceleratedFrame.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer/src/nanoplatformer/NanoPlatformer.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer/src/nanoplatformer/output/AcceleratedCanvas.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/renderer/IRenderer.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/renderer/java2D/GraphicsPool.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/GameLoop.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/NanoPlatformer.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/JustTimingGameLoop.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/output/java2D/AcceleratedFrame.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/input/Keyboard.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/input/IPollableInput.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/renderer/java2D/BasicRenderer.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/output/java2D/AcceleratedCanvas.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/renderer/GraphicItem.java</file>
         </group>
     </open-files>
 </project-private>
