@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import javax.imageio.ImageIO;
-import nanoplatformer.graphics.GraphicItem;
+import nanoplatformer.graphics.ImageInfo;
 import nanoplatformer.graphics.graphicspool.BaseGraphicsPool;
 import nanoplatformer.graphics.renderer.PNGFileFilter;
 
@@ -22,7 +22,7 @@ import nanoplatformer.graphics.renderer.PNGFileFilter;
 public class Java2DGraphicsPool extends BaseGraphicsPool {
 
     
-    private Map<GraphicItem, BufferedImage> graphicsMap;
+    private Map<String, BufferedImage> graphicsMap;
     
     
 
@@ -32,23 +32,23 @@ public class Java2DGraphicsPool extends BaseGraphicsPool {
 
     }
 
-    public BufferedImage getBufferedImage(GraphicItem item) {
-        return graphicsMap.get(item);
+    public BufferedImage getBufferedImageFromName(String name) {
+        return graphicsMap.get(name);
     }
 
     @Override
-    protected Map<String, GraphicItem> loadSpecificImages() {
+    protected Map<String, ImageInfo> loadSpecificImages() {
 
-        Map<String, GraphicItem> graphicsItemsMap=new HashMap();
+        Map<String, ImageInfo> graphicsItemsMap=new HashMap();
         String[] imageFileNames = new File(".").list(new PNGFileFilter());
         
 
         for (String filename : imageFileNames) {
             try {
                     BufferedImage image=ImageIO.read(new File(filename));
-                    GraphicItem item=new GraphicItem(removeExtension(filename),image.getWidth(),image.getHeight());
+                    ImageInfo item=new ImageInfo(removeExtension(filename),image.getWidth(),image.getHeight());
                     
-                graphicsMap.put(item, image);
+                graphicsMap.put(item.getName(), image);
                 graphicsItemsMap.put(item.getName(), item);
             } catch (IOException ex) {
             }

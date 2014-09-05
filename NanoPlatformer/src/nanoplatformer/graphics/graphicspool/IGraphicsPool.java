@@ -6,7 +6,7 @@
 
 package nanoplatformer.graphics.graphicspool;
 
-import nanoplatformer.graphics.GraphicItem;
+import nanoplatformer.graphics.ImageInfo;
 
 /**
  *
@@ -17,8 +17,9 @@ public interface IGraphicsPool {
     
 public void loadFromCurrentDirectory();
     
-public GraphicItem getFromName(String name);
-    
+public ImageInfo getGraphicsInfoFromName(String name);
+
+   
     
     
 }

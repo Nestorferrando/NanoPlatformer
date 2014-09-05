@@ -6,7 +6,6 @@
 package nanoplatformer.samples;
 
 import java.awt.Color;
-import nanoplatformer.graphics.graphicspool.IGraphicsPool;
 import nanoplatformer.graphics.graphicspool.java2D.Java2DGraphicsPool;
 import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
 import nanoplatformer.graphics.renderer.IRenderer;
@@ -25,21 +24,25 @@ public class SimpleRender {
 
         Java2DGraphicsPool java2DGraphicsPool = new Java2DGraphicsPool();
         java2DGraphicsPool.loadFromCurrentDirectory();
+        
 
         IRenderer renderer = new Java2DRenderer(java2DGraphicsPool, new AcceleratedFrame(640, 480));
-
+        
         //------------------
         //render items from graphic names using only interfaces
         //------------------
-        renderStuff(java2DGraphicsPool, renderer);
+        renderStuff(renderer);
     }
 
-    private static void renderStuff(IGraphicsPool graphicsPool, IRenderer renderer) {
+    
+
+    
+    private static void renderStuff(IRenderer renderer) {
 
         //we need to clear the background first
         renderer.fillBackground(Color.yellow);
 
-        renderer.drawGraphic(graphicsPool.getFromName("squareDev"), 64, 64);
+        renderer.drawImage("squareDev", 64, 64);
         renderer.showBuffer();
     }
 

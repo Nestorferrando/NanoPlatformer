@@ -9,7 +9,6 @@ package nanoplatformer.graphics.renderer.java2D;
 import nanoplatformer.graphics.graphicspool.java2D.Java2DGraphicsPool;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import nanoplatformer.graphics.GraphicItem;
 import nanoplatformer.graphics.renderer.IRenderer;
 import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
 
@@ -28,10 +27,10 @@ public class Java2DRenderer implements IRenderer {
     }
 
     @Override
-    public void drawGraphic(GraphicItem resource, int positionX, int positionY) {
+    public void drawImage(String imageName, int positionX, int positionY) {
         
         Graphics2D g=acceleratedFrame.getCanvas().getGraphics();
-        g.drawImage(graphicsPool.getBufferedImage(resource), positionX,positionY,null);
+        g.drawImage(graphicsPool.getBufferedImageFromName(imageName), positionX,positionY,null);
         g.dispose();
     }
 

@@ -6,7 +6,7 @@
 
 package nanoplatformer.samples;
 
-import nanoplatformer.loop.GameLoop;
+import nanoplatformer.loop.BaseGameLoop;
 import nanoplatformer.loop.JustTimingGameLoop;
 
 /**
@@ -21,7 +21,7 @@ public class SimpleLoop {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        GameLoop loop= new JustTimingGameLoop(30);
+        BaseGameLoop loop= new JustTimingGameLoop(30);
         loop.start();
     }
     

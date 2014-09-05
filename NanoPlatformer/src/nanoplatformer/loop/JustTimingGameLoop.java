@@ -10,7 +10,7 @@ package nanoplatformer.loop;
  *
  * @author Nestor
  */
-public class JustTimingGameLoop extends GameLoop {
+public class JustTimingGameLoop extends BaseGameLoop {
 
     private long previousTime;
 

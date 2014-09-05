@@ -6,7 +6,6 @@
 
 package nanoplatformer.graphics.renderer;
 
-import nanoplatformer.graphics.GraphicItem;
 import java.awt.Color;
 
 /**
@@ -17,7 +16,7 @@ import java.awt.Color;
 public interface IRenderer {
     
     
-    public void drawGraphic(GraphicItem resource,int positionX, int positionY);
+    public void drawImage(String imageName,int positionX, int positionY);
     
     public void fillBackground(Color color);
     

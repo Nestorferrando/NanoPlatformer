@@ -8,7 +8,7 @@ package nanoplatformer.graphics.graphicspool;
 
 import java.util.HashMap;
 import java.util.Map;
-import nanoplatformer.graphics.GraphicItem;
+import nanoplatformer.graphics.ImageInfo;
 
 /**
  *
@@ -16,7 +16,7 @@ import nanoplatformer.graphics.GraphicItem;
  */
 public abstract class BaseGraphicsPool implements IGraphicsPool {
     
-    private Map<String,GraphicItem> graphicsItems;
+    private Map<String,ImageInfo> graphicsItems;
 
     public BaseGraphicsPool() {
         
@@ -30,10 +30,10 @@ public abstract class BaseGraphicsPool implements IGraphicsPool {
     
 
     @Override
-    public GraphicItem getFromName(String name) {
+    public ImageInfo getGraphicsInfoFromName(String name) {
        return graphicsItems.get(name);
     }
     
-    protected abstract Map<String,GraphicItem> loadSpecificImages();
+    protected abstract Map<String,ImageInfo> loadSpecificImages();
     
 }

@@ -12,13 +12,13 @@ import java.util.Objects;
  *
  * @author Nestor
  */
-public class GraphicItem {
+public class ImageInfo {
     
     private final String name;
     private final int width;
     private final int height;
 
-    public GraphicItem(String name, int width, int height) {
+    public ImageInfo(String name, int width, int height) {
         this.name = name;
         this.width = width;
         this.height = height;
@@ -53,7 +53,7 @@ public class GraphicItem {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final GraphicItem other = (GraphicItem) obj;
+        final ImageInfo other = (ImageInfo) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

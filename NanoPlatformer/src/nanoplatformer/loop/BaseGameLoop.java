@@ -10,14 +10,14 @@ package nanoplatformer.loop;
  *
  * @author Nestor
  */
-public abstract class GameLoop extends Thread {
+public abstract class BaseGameLoop extends Thread {
 
     
     private long msPerFrame;
     
     private boolean running=true;
     
-    public GameLoop(int framesPerSecond) {
+    public BaseGameLoop(int framesPerSecond) {
         
         String osName = System.getProperty("os.name");
         if (osName.startsWith("Win")) {
