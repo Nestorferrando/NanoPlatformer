@@ -6,6 +6,7 @@
 
 package nanoplatformer.samples;
 
+import java.awt.Color;
 import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
 import nanoplatformer.graphics.renderer.GraphicItem;
 import nanoplatformer.graphics.renderer.IRenderer;
@@ -28,11 +29,13 @@ public class SimpleRender {
         
 IRenderer renderer = new BasicRenderer(new GraphicsPool(),new AcceleratedFrame(640,480));
 
+
+//we need to clear the background first
+renderer.fillBackground(Color.yellow);
+        
 renderer.drawGraphic(new GraphicItem("squareDev"), 64, 64);
 renderer.showBuffer();
 
-renderer.drawGraphic(new GraphicItem("squareDev"), 128, 128);
-renderer.showBuffer();
 
 
     }

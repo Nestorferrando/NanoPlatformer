@@ -6,6 +6,8 @@
 
 package nanoplatformer.graphics.renderer;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nestor
@@ -15,6 +17,8 @@ public interface IRenderer {
     
     
     public void drawGraphic(GraphicItem resource,int positionX, int positionY);
+    
+    public void fillBackground(Color color);
     
     public void showBuffer();
     

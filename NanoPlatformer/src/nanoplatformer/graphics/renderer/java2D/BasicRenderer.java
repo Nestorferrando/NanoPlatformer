@@ -6,6 +6,7 @@
 
 package nanoplatformer.graphics.renderer.java2D;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import nanoplatformer.graphics.renderer.GraphicItem;
 import nanoplatformer.graphics.renderer.IRenderer;
@@ -29,7 +30,6 @@ public class BasicRenderer implements IRenderer {
     public void drawGraphic(GraphicItem resource, int positionX, int positionY) {
         
         Graphics2D g=acceleratedFrame.getCanvas().getGraphics();
-        
         g.drawImage(graphicsPool.getBufferedImage(resource), positionX,positionY,null);
         g.dispose();
     }
@@ -38,5 +38,15 @@ public class BasicRenderer implements IRenderer {
     public void showBuffer() {
         acceleratedFrame.getCanvas().showGraphics();
     }
+
+    @Override
+    public void fillBackground(Color color) {
+       Graphics2D g=acceleratedFrame.getCanvas().getGraphics();
+       g.setColor(color);
+       g.fillRect(0, 0, acceleratedFrame.getWidth(), acceleratedFrame.getHeight());
+       g.dispose();
+    }
+    
+    
     
 }
