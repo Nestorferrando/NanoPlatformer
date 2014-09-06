@@ -15,7 +15,7 @@ import nanoplatformer.graphics.renderer.java2D.Java2DRenderer;
  *
  * @author Nestor
  */
-public class SimpleRender {
+public class C_SimpleRender {
 
     /**
      * @param args the command line arguments

@@ -18,6 +18,7 @@ public interface ILevelHolder {
     
     public void addLevelElement(LevelComponent element);
     
+    
     public List<LevelComponent> getAllLevelElements();
     
     public List<LevelComponent> getElementsInside(int x,int y, int width, int height);

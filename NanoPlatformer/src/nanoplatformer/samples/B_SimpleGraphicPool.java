@@ -15,7 +15,7 @@ import nanoplatformer.graphics.graphicspool.java2D.Java2DGraphicsPool;
  *
  * @author Nestor
  */
-public class SimpleImageInfo {
+public class B_SimpleGraphicPool {
 
     /**
      * @param args the command line arguments

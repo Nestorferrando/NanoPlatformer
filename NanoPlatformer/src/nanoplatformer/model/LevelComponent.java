@@ -16,12 +16,12 @@ public class LevelComponent {
     
     private int positionX;
     private int positionY;
-    private ImageInfo graphicResource;
+    private ImageInfo graphicInfo;
 
     public LevelComponent(int positionX, int positionY, ImageInfo graphicResource) {
         this.positionX = positionX;
         this.positionY = positionY;
-        this.graphicResource = graphicResource;
+        this.graphicInfo = graphicResource;
     }
 
     public int getPositionX() {
@@ -33,7 +33,7 @@ public class LevelComponent {
     }
 
     public ImageInfo getImageInfo() {
-        return graphicResource;
+        return graphicInfo;
     }
     
     
