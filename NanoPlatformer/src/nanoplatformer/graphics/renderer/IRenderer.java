@@ -7,6 +7,7 @@
 package nanoplatformer.graphics.renderer;
 
 import java.awt.Color;
+import java.awt.Rectangle;
 
 /**
  *
@@ -17,9 +18,12 @@ public interface IRenderer {
     
     
     public void drawImage(String imageName,int positionX, int positionY);
+   
     
     public void fillBackground(Color color);
     
     public void showBuffer();
+    
+    public Rectangle getRenderableArea();
     
 }

@@ -9,6 +9,7 @@ package nanoplatformer.graphics.renderer.java2D;
 import nanoplatformer.graphics.graphicspool.java2D.Java2DGraphicsPool;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import nanoplatformer.graphics.renderer.IRenderer;
 import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
 
@@ -46,6 +47,12 @@ public class Java2DRenderer implements IRenderer {
        g.fillRect(0, 0, acceleratedFrame.getWidth(), acceleratedFrame.getHeight());
        g.dispose();
     }
+
+    @Override
+    public Rectangle getRenderableArea() {
+       return new Rectangle(0,0,acceleratedFrame.getCanvas().getWidth(),acceleratedFrame.getCanvas().getHeight());
+    }
+    
     
     
     

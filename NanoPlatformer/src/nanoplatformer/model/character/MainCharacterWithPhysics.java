@@ -56,7 +56,6 @@ public class MainCharacterWithPhysics {
         
         boolean collision_left = collides(new Rectangle((int) positionX, (int) positionY, 1, graphicInfo.getHeight()-2), collisions);
         boolean collision_right = collides(new Rectangle((int) positionX + graphicInfo.getWidth(), (int) positionY, 1, graphicInfo.getHeight()-2), collisions);
-
         
         float elapsedSeconds=timespan*0.001f;
                 
