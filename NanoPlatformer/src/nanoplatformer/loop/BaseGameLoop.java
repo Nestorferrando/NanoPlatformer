@@ -44,7 +44,7 @@ public abstract class BaseGameLoop extends Thread {
            performLoopOperations(previousStepTimeMS,currentStepTimeMS);
            
            long nextLoopTime_ms=currentStepTimeMS+msPerFrame;
-           long remaining_ms=nextLoopTime_ms-getCurrentTimeMS();
+           long remaining_ms=Math.max(0,nextLoopTime_ms-getCurrentTimeMS());
            try {
                Thread.sleep(remaining_ms);
            } catch (InterruptedException ex){}

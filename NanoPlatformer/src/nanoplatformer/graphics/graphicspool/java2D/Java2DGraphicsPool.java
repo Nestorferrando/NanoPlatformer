@@ -24,7 +24,6 @@ public class Java2DGraphicsPool extends BaseGraphicsPool {
     
     private Map<String, BufferedImage> graphicsMap;
     
-    
 
     public Java2DGraphicsPool() {
         this.graphicsMap = new HashMap();

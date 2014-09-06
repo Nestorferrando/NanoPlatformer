@@ -26,7 +26,8 @@ public class B_SimpleGraphicPool {
         graphicsPool.loadFromCurrentDirectory();
         
        ImageInfo info=graphicsPool.getGraphicsInfoFromName("squareDev");
-       System.out.println("image size: "+info.getWidth()+"x"+info.getHeight());  
+       System.out.println("Image name: "+info.getName()+", image size: "+info.getWidth()+"x"+info.getHeight());  
+       
     }
 
 }
