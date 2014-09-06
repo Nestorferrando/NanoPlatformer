@@ -12,7 +12,7 @@ import nanoplatformer.graphics.ImageInfo;
  *
  * @author Nestor
  */
-public class MainCharacterWithoutPhysics implements IMainCharacter {
+public class MainCharacterWithoutPhysics  {
     
     
     private static float PIXELS_PER_SECOND=64;
@@ -40,7 +40,6 @@ public class MainCharacterWithoutPhysics implements IMainCharacter {
         return graphicInfo;
     }
 
-    @Override
     public void update(boolean[] keys,long timespan) {
         
         float pixelsToMove=  (timespan*PIXELS_PER_SECOND)*0.001f;

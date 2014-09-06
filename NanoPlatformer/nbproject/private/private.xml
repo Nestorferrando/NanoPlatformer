@@ -4,23 +4,21 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/renderer/IRenderer.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/model/levelholder/ILevelHolder.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/JustTimingGameLoop.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/output/java2D/AcceleratedFrame.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/samples/H_SimpleGameLoop1.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/samples/B_SimpleGraphicPool.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/input/Keyboard.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/samples/SimpleLoop.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/samples/SimpleRender.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/samples/SimpleImageInfo.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/H_CompleteLoopWithoutPhysics.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/samples/C_SimpleRender.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/model/levelholder/ListBasedLevelHolder.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/model/character/MainCharacterWithPhysics.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/ImageInfo.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/model/character/MainCharacterWithoutPhysics.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/graphicspool/java2D/Java2DGraphicsPool.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/model/LevelComponent.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/graphicspool/BaseGraphicsPool.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loader/LevelLoader.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/input/IPollableInput.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/G_KeyboardGameLoop.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/BaseGameLoop.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/renderer/java2D/Java2DRenderer.java</file>
-            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/output/java2D/AcceleratedCanvas.java</file>
+            <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/loop/I_CompleteLoopWithPhysics.java</file>
             <file>file:/C:/Users/Nestor/Dropbox/Taller%20AEV/NanoPlatformer-GIT/NanoPlatformer/src/nanoplatformer/graphics/graphicspool/IGraphicsPool.java</file>
         </group>
     </open-files>
