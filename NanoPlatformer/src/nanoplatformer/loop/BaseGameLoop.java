@@ -17,6 +17,9 @@ public abstract class BaseGameLoop extends Thread {
     
     private boolean running=true;
     
+    private long previousStepTimeMS;
+    private long currentStepTimeMS;
+    
     public BaseGameLoop(int framesPerSecond) {
         
         String osName = System.getProperty("os.name");
@@ -33,18 +36,20 @@ public abstract class BaseGameLoop extends Thread {
     @Override
     public void run() {
       
+        previousStepTimeMS=currentStepTimeMS=getCurrentTimeMS();
+        
        while(running){
        
-           long currentLoopTime_ms=getCurrentTimeMS();
+           currentStepTimeMS=getCurrentTimeMS();
+           performLoopOperations(previousStepTimeMS,currentStepTimeMS);
            
-           performLoopOperations(currentLoopTime_ms);
-           
-           long nextLoopTime_ms=currentLoopTime_ms+msPerFrame;
+           long nextLoopTime_ms=currentStepTimeMS+msPerFrame;
            long remaining_ms=nextLoopTime_ms-getCurrentTimeMS();
            try {
                Thread.sleep(remaining_ms);
            } catch (InterruptedException ex){}
            
+           this.previousStepTimeMS=currentStepTimeMS;
        }   
     }
 
@@ -53,7 +58,7 @@ public abstract class BaseGameLoop extends Thread {
     }
 
     //Template Method (design pattern)
-    protected abstract void performLoopOperations(long currentLoopTime_ms);
+    protected abstract void performLoopOperations(long previousLoopTime_ms,long currentLoopTime_ms);
 
     private void createTimerAccuracyThread() {
         // On windows the sleep functions can be highly inaccurate by

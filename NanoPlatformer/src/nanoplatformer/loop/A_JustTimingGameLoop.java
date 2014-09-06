@@ -12,7 +12,6 @@ package nanoplatformer.loop;
  */
 public class A_JustTimingGameLoop extends BaseGameLoop {
 
-    private long previousTime;
 
     public A_JustTimingGameLoop(int framesPerSecond) {
         super(framesPerSecond);
@@ -21,11 +20,10 @@ public class A_JustTimingGameLoop extends BaseGameLoop {
     
     
     @Override
-    protected void performLoopOperations(long currentLoopTime_ms) {
-        System.out.println("current time: "+currentLoopTime_ms+", elapsed time: "+(currentLoopTime_ms-previousTime));
+    protected void performLoopOperations(long previousLoopTime_ms, long currentLoopTime_ms) {
+        System.out.println("current time: "+currentLoopTime_ms+", elapsed time: "+(currentLoopTime_ms-previousLoopTime_ms));
         
         performRandomCalculations();
-        previousTime=currentLoopTime_ms;
         
     }
 

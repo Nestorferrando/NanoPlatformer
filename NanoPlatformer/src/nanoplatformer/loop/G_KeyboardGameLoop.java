@@ -24,7 +24,7 @@ public class G_KeyboardGameLoop extends BaseGameLoop {
     
     
     @Override
-    protected void performLoopOperations(long currentLoopTime_ms) {
+    protected void performLoopOperations(long previousLoopTime_ms, long currentLoopTime_ms) {
        
         input.poll();
         if (input.isPressed(0)) System.out.println("key 0 pressed");

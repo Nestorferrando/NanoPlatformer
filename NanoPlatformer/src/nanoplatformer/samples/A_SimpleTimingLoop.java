@@ -13,7 +13,7 @@ import nanoplatformer.loop.A_JustTimingGameLoop;
  *
  * @author Nestor
  */
-public class A_SimpleLoop {
+public class A_SimpleTimingLoop {
 
     /**
      * @param args the command line arguments
