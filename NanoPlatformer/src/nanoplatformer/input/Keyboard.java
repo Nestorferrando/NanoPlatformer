@@ -30,7 +30,6 @@ public class Keyboard implements IPollableInput {
 
                 Component[] c = controllers[i].getComponents();
                 for (int k = 0; k < c.length; k++) {
-
                     if (c[k].getName().equals(codigo)) {
                         keyMap[i][j] = k;
                         break;

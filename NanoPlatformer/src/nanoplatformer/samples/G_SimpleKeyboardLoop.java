@@ -6,14 +6,17 @@
 
 package nanoplatformer.samples;
 
+import nanoplatformer.graphics.output.java2D.AcceleratedFrame;
+import nanoplatformer.input.IPollableInput;
+import nanoplatformer.input.Keyboard;
 import nanoplatformer.loop.BaseGameLoop;
-import nanoplatformer.loop.A_JustTimingGameLoop;
+import nanoplatformer.loop.G_KeyboardGameLoop;
 
 /**
  *
  * @author Nestor
  */
-public class A_SimpleLoop {
+public class G_SimpleKeyboardLoop {
 
     /**
      * @param args the command line arguments
@@ -21,7 +24,11 @@ public class A_SimpleLoop {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        BaseGameLoop loop= new A_JustTimingGameLoop(30);
+        new AcceleratedFrame(640, 480);
+        
+        IPollableInput keyboard=new Keyboard(new String[]{"W","S","A","D"});
+        
+        BaseGameLoop loop= new G_KeyboardGameLoop(30,keyboard);
         loop.start();
     }
     

@@ -10,11 +10,11 @@ package nanoplatformer.loop;
  *
  * @author Nestor
  */
-public class JustTimingGameLoop extends BaseGameLoop {
+public class A_JustTimingGameLoop extends BaseGameLoop {
 
     private long previousTime;
 
-    public JustTimingGameLoop(int framesPerSecond) {
+    public A_JustTimingGameLoop(int framesPerSecond) {
         super(framesPerSecond);
     }
     
