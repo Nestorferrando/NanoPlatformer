@@ -15,10 +15,8 @@ import nanoplatformer.input.IPollableInput;
 import nanoplatformer.input.Keyboard;
 import nanoplatformer.loader.LevelLoader;
 import nanoplatformer.loop.BaseGameLoop;
-import nanoplatformer.loop.H_CompleteLoopWithoutPhysics;
 import nanoplatformer.loop.I_CompleteLoopWithPhysics;
 import nanoplatformer.model.character.MainCharacterWithPhysics;
-import nanoplatformer.model.character.MainCharacterWithoutPhysics;
 import nanoplatformer.model.levelholder.ILevelHolder;
 
 /**
@@ -44,7 +42,7 @@ public class I_SimpleGameLoop2 {
         
         ILevelHolder levelHolder=new LevelLoader().loadLevel("basicLevel.txt", graphicsPool);
         
-        MainCharacterWithPhysics character= new MainCharacterWithPhysics(32,32,graphicsPool.getGraphicsInfoFromName("dolan"));
+        MainCharacterWithPhysics character= new MainCharacterWithPhysics(32,32,graphicsPool.getGraphicsInfoFromName("orangeGuy"));
         
         BaseGameLoop loop= new I_CompleteLoopWithPhysics(60,keyboard,levelHolder,character,renderer);
         loop.start();

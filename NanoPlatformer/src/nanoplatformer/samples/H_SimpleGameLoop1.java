@@ -42,7 +42,7 @@ public class H_SimpleGameLoop1 {
         
         ILevelHolder levelHolder=new LevelLoader().loadLevel("basicLevel.txt", graphicsPool);
         
-        MainCharacterWithoutPhysics character= new MainCharacterWithoutPhysics(32,32,graphicsPool.getGraphicsInfoFromName("dolan"));
+        MainCharacterWithoutPhysics character= new MainCharacterWithoutPhysics(32,32,graphicsPool.getGraphicsInfoFromName("orangeGuy"));
         
         BaseGameLoop loop= new H_CompleteLoopWithoutPhysics(30,keyboard,levelHolder,character,renderer);
         loop.start();
