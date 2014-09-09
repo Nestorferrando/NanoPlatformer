@@ -60,21 +60,19 @@ public class MainCharacterWithPhysics {
         float elapsedSeconds=timespan*0.001f;
                 
         if (collision_bottom) {
-            
-         speedY=0;  
-            
+         speedY=0;   
          if (keys[0]) speedY=-JUMPING_SPEED;
-         if (keys[2]) speedX-=HORIZONTAL_ACCELERATION*elapsedSeconds;
-         if (keys[3]) speedX+=HORIZONTAL_ACCELERATION*elapsedSeconds;   
+        }
+        else {speedY+=GRAVITY;}
+        
+        
+        if (keys[2]) speedX-=HORIZONTAL_ACCELERATION*elapsedSeconds;
+        if (keys[3]) speedX+=HORIZONTAL_ACCELERATION*elapsedSeconds;   
          
-         if (!keys[2] && !keys[3]) {
+        if (!keys[2] && !keys[3]) {
              if (Math.abs(speedX)>1f)  speedX-=HORIZONTAL_ACCELERATION*elapsedSeconds*Math.signum(speedX);    
              else speedX=0;
-         
-         }
         }
-        
-        else {speedY+=GRAVITY;}
         
         if (Math.abs(speedX)>MAX_RUNNING_SPEED) speedX=MAX_RUNNING_SPEED*Math.signum(speedX);
         

@@ -42,7 +42,7 @@ public class J_SimpleGameLoop3 {
         
         ILevelHolder levelHolder=new LevelLoader().loadLevel("basicLevel.txt", graphicsPool);
         
-        MainCharacterWithPhysics character= new MainCharacterWithPhysics(32,32,graphicsPool.getGraphicsInfoFromName("orangeGuy"));
+        MainCharacterWithPhysics character= new MainCharacterWithPhysics(32,320,graphicsPool.getGraphicsInfoFromName("orangeGuy"));
         
         BaseGameLoop loop= new J_CompleteLoopWithCameraMovement(60,keyboard,levelHolder,character,renderer);
         loop.start();
